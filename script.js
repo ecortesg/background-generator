@@ -1,8 +1,9 @@
-let css = document.querySelector("h3");
-let color1 = document.querySelector(".color1");
-let color2 = document.querySelector(".color2");
+let hex = document.getElementById("hex");
+let css = document.getElementById("css");
+let color1 = document.getElementById("color1");
+let color2 = document.getElementById("color2");
 let body = document.getElementById("gradient");
-let btn = document.querySelector("button");
+let btn = document.getElementById("randomize");
 
 function setGradient(color1, color2) {
 	body.style.background = 
@@ -12,7 +13,8 @@ function setGradient(color1, color2) {
 	+ color2 
 	+ ")";
 
-	css.textContent = color1 + " | " + color2;
+	hex.textContent = color1 + " | " + color2;
+	css.textContent = "background: " + body.style.background + ";";
 }
 
 function randomColor() {
